@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Archivo+Black&family=Boogaloo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&family=Viaoda+Libre&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Ancizar+Serif;
+}
+body{
+  min-height: 100h;
+  background-color: #fcfcfc;
+
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+hr{
+border: none;
+height: 1px;
+background-color: #a9a9a9;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}

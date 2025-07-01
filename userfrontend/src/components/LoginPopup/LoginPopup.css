@@ -1,0 +1,120 @@
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(6px);
+}
+
+.login-popup-container {
+  background: #ffffff;
+  padding: 30px 35px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-popup-title h2 {
+  color: #0B1D51;
+  font-size: 24px;
+  margin: 0;
+}
+
+.login-popup-title img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-popup-title img:hover {
+  transform: rotate(90deg);
+}
+
+.login-popup-inputs input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-popup-inputs input:focus {
+  border-color: #0B1D51;
+}
+
+.btn {
+  background-color: #0B1D51;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #112a6b;
+}
+
+.login-popup-condition {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #333;
+}
+
+.login-popup-condition input {
+  margin-top: 3px;
+}
+
+.login-popup-container p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}
+
+.login-popup-container span {
+  color: #0B1D51;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-popup-container span:hover {
+  text-decoration: underline;
+}

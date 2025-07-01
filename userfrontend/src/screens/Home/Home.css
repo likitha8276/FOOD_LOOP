@@ -1,0 +1,30 @@
+/* Home.css */
+.home {
+  background-color: #0B1D51; /* theme color */
+  color: white;
+  min-height: 100vh;
+  padding: 2rem 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.home-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.home-food-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}

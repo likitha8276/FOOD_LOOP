@@ -1,0 +1,235 @@
+:root {
+  --theme-color: #0B1D51;
+  --theme-text: #ffffff;
+  --theme-hover: #112a6b;
+  --accent-color: #0B1D51;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  color: #0B1D51cc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: var(--accent-color);
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-menu .active {
+  color: var(--accent-color);
+}
+
+.navbar-menu .active::after {
+  width: 100%;
+}
+
+.dot-basket {
+  position: relative;
+  margin-right: 10px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.dot-basket img {
+  width: 22px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar-right button {
+  padding: 8px 20px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navbar-right button:hover {
+  background-color: var(--theme-hover);
+}
+
+.navbar-profile {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Dropdown logic: stays on hover + click */
+.navbar-profile:focus-within .nav-profile-dropdown,
+.navbar-profile:hover .nav-profile-dropdown {
+  display: flex;
+}
+
+.nav-profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 160px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.nav-profile-dropdown a,
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown a:hover,
+.nav-profile-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-profile-dropdown img {
+  width: 18px;
+}
+
+hr {
+  margin: 8px 0;
+  border: none;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    gap: 20px;
+  }
+
+  .navbar-right button {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  .dot-basket img {
+    width: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 4vw;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar-menu a {
+    font-size: 15px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-right button {
+    font-size: 14px;
+    padding: 6px 12px;
+    flex: 1;
+    margin-left: auto;
+  }
+
+  .navbar-profile img {
+    width: 28px;
+  }
+
+  .dot-basket {
+    margin-right: 10px;
+  }
+}

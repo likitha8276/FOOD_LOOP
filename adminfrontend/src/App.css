@@ -1,0 +1,97 @@
+.screen {
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafe;
+  color: #0B1D51;
+}
+
+form.flex-col {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+form p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e0e6f0;
+  background: #f9fafe;
+  font-size: 1rem;
+  outline-color: #0B1D51;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #0B1D51;
+  background: #fff;
+}
+
+.add-image-upload-flexcol {
+  text-align: center;
+}
+
+.add-image-upload-flexcol img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 2px dashed #0B1D51;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-image-upload-flexcol img:hover {
+  background-color: #f0f2f9;
+}
+
+.add-category-price {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.add-category-flexcol,
+.add-price-flex-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-btn {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #0B1D51;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #112a6b;
+}
