@@ -6,7 +6,7 @@ export const StoreContext = createContext();
 const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [food_list, setFoodList] = useState([]);
-  const url = 'http://127.0.0.1:4000';
+  const url = 'https://food-loop.onrender.com';
 
 
   const [token, setToken] = useState(() => localStorage.getItem("token") || "");
